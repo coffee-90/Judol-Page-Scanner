@@ -1042,7 +1042,7 @@ function Query {
 		else
 			IFS=$'\n' sorted=($(sort -u <<<"${result[@]}" | tr " " "\n")) # Sort the results
 			echo -e " "
-			for each in "${sorted[@]}"; do echo -e "\t$GREEN[ + ]$CLEAR_FONT $each"; done
+			for each in "${sorted[@]}"; do echo -e "$each"; done
 	fi
 
 	### Unset variables
